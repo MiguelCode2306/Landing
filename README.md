@@ -1,3 +1,3 @@
 # Landing
 
-creando el landing page con html, csss y js
+creando el landing page con html y csss
