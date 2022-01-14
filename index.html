@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website Landing Page - With Background Video Slider | Travel</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand"><img src="./img/Grupo de 2 objetosULTIMO.png" alt=""></a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#">Inicio</a>
+          <a href="#">Nosotros</a>
+          <a href="#">Servicios</a>
+          <a href="#">Proyectos</a>
+          <a href="#">Contacto</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+    
+      <div class="video-slide active sildeviv">                                  </div>
+  <!--     <img class="video-slide" src="./fondos JC 01.jpg" autoplay muted loop> -->
+      <video class="video-slide" src="https://firebasestorage.googleapis.com/v0/b/landing-page-d8b3b.appspot.com/o/Landing-page%2FVideo%2Fdise%C3%B1o.mp4?alt=media&token=746d08b3-a22c-4077-9fc7-e58fa567803c" autoplay muted loop></video>
+      <video class="video-slide" src="https://firebasestorage.googleapis.com/v0/b/landing-page-d8b3b.appspot.com/o/Landing-page%2FVideo%2Fauto.mp4?alt=media&token=8a1e87c5-21ec-42f3-b85c-6777b9fd51ce" autoplay muted loop></video>
+      <video class="video-slide" src="https://firebasestorage.googleapis.com/v0/b/landing-page-d8b3b.appspot.com/o/Landing-page%2FVideo%2Fcamara.mp4?alt=media&token=2927a355-6d16-442b-9915-5edbf143d711" autoplay muted loop></video>
+      <video class="video-slide" src="https://firebasestorage.googleapis.com/v0/b/landing-page-d8b3b.appspot.com/o/Landing-page%2FVideo%2Fhumo.mp4?alt=media&token=877af741-e26b-4c79-a620-70c844b06aeb" autoplay muted loop></video>
+      <div class="content active primerdiv">
+       
+        <h1>Agencia de <br><span>Marketing</span><br>& productora <br><span>Audiovisual</span></h1>
+        <a href="#">Cotizar</a>
+        <img class="imagen circulo" src="./img/Elipse.png" alt="">
+        <img class="imagen" src="./img/cropped-hombre-señalando.png" alt="">
+    
+      </div>
+      <div class="content">
+       
+        <h1>Diseño<br><span>Gráfico</span></h1>
+        <a href="#">Cotizar</a>
+
+      </div>
+      <div class="content">
+
+        <h1>Social<br><span>Media</span></h1>
+        <a href="#">Cotizar</a>
+
+      </div>
+      <div class="content">
+        <h1>Estudio de<br><span>Fotografia</span><br><span>Profesional</span></h1>
+   
+        <a href="#">Cotizar</a>
+    
+      </div>
+      <div class="content">
+        <h1><span>Diseño</span><br>& Desarrollo Web <br></h1>
+        <a href="#">Cotizar</a>
+       
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+
+
+
+
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>
